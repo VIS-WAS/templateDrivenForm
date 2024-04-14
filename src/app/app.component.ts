@@ -29,7 +29,7 @@ export class AppComponent {
   ];
 
   OnFormSubmit() {
-    console.log(this.form);
+    console.log(this.form.valid);
     console.log(this.form.controls['firstname'].value);
     console.log(this.form.value.lastname);
     console.log(this.form.value.email);
