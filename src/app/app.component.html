@@ -11,9 +11,16 @@
           type="text"
           placeholder="First Name"
           name="firstname"
-          ngModel
+          [(ngModel)]="firstName"
           required
+          #fname="ngModel"
         />
+        <div>
+          <small *ngIf="fname.touched && fname.invalid"
+            >*First name is required</small
+          >
+          <span *ngIf="firstName"> Firstname: {{ firstName }}</span>
+        </div>
       </div>
 
       <div class="input-box">
@@ -21,9 +28,16 @@
           type="text"
           placeholder="Last Name"
           name="lastname"
-          ngModel
+          [(ngModel)]="lastname"
           required
+          #lname="ngModel"
         />
+        <div>
+          <small *ngIf="lname.touched && lname.invalid"
+            >*Last name is required</small
+          >
+          <span *ngIf="lastname"> Lastname: {{ lastname }}</span>
+        </div>
       </div>
     </div>
 
@@ -32,10 +46,17 @@
         type="text"
         placeholder="Email"
         name="email"
-        ngModel
+        [(ngModel)]="mail"
         required
         email
+        #email="ngModel"
       />
+      <div>
+        <small *ngIf="email.touched && email.invalid"
+          >*e-mail is required</small
+        >
+        <span *ngIf="mail"> Email: {{ mail }}</span>
+      </div>
     </div>
 
     <div class="column">

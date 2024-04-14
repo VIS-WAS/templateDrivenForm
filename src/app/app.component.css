@@ -112,12 +112,7 @@ input.ng-invalid.ng-touched {
   border: red 2px solid;
 }
 
-small {
-  color: red;
-  font-weight: bold;
-}
-
-.btn-gen-username {
+/* .btn-gen-username {
   margin: 10px 0px;
   padding: 10px 30px;
   border-radius: 5px;
@@ -162,11 +157,19 @@ small {
 span {
   padding: 5px 5px;
   font-weight: bold;
-}
+} */
 
 .disabled-btn {
   cursor: not-allowed;
 }
 .enabled-btn {
   cursor: pointer;
+}
+input.ng-invalid.ng-touched {
+  border: red 2px solid;
+  border-radius: 3px;
+}
+small {
+  color: red;
+  font-weight: bold;
 }
