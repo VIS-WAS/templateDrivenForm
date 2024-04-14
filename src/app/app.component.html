@@ -36,35 +36,15 @@
     <div class="gender-box">
       <h3>Gender</h3>
       <div class="gender-option">
-        <div class="gender">
+        <div class="gender" *ngFor="let gender of genders">
           <input
             type="radio"
-            id="check-male"
-            value="male"
+            [id]="gender.id"
+            [value]="gender.value"
             name="gender"
             ngModel
           />
-          <label for="check-male">male</label>
-        </div>
-        <div class="gender">
-          <input
-            type="radio"
-            id="check-female"
-            value="female"
-            name="gender"
-            ngModel
-          />
-          <label for="check-female">Female</label>
-        </div>
-        <div class="gender">
-          <input
-            type="radio"
-            id="check-other"
-            value="other"
-            name="gender"
-            ngModel
-          />
-          <label for="check-other">prefer not to say</label>
+          <label [for]="gender.id">{{ gender.display }}</label>
         </div>
       </div>
     </div>
