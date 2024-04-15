@@ -174,3 +174,7 @@ small {
   color: red;
   font-weight: bold;
 }
+
+.input-checkbox {
+  width: 10px;
+}

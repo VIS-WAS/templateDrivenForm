@@ -165,10 +165,16 @@
           required
         />
       </div>
-      <small *ngIf="adressTRV.touched && adressTRV.invalid"
-        >*Some of the required field of address is not filled</small
-      >
     </div>
+
+    <div class="column">
+      <input type="checkbox" name="agreement" [ngModel]="IsAgreed" />
+      <label for="agreement"> I agree to terms & conditions</label><br />
+    </div>
+
+    <small *ngIf="adressTRV.touched && adressTRV.invalid"
+      >*Some of the required field of address is not filled</small
+    >
 
     <div class="column">
       <input

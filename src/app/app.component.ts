@@ -23,6 +23,8 @@ export class AppComponent {
   defaultGender: string = 'male';
   defaultCountry: string = 'India';
 
+  IsAgreed: boolean = false;
+
   @ViewChild('registrationForm') form: NgForm;
   genders = [
     {
@@ -54,8 +56,9 @@ export class AppComponent {
     this.postal = this.form.value.address.postal;
     this.username = this.form.value.username;
     this.dob = this.form.value.dob;
+    this.IsAgreed = this.form.value.agreement;
 
-    this.resetForm();
+    // this.resetForm();
   }
   resetForm() {
     this.form.reset();
