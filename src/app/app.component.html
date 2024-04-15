@@ -85,6 +85,7 @@
         #uname="ngModel"
       />
       <button
+        type="button"
         class="btn-gen-username"
         [disabled]="fname.invalid || lname.invalid || dobTRV.invalid"
         (click)="generateUserName()"
@@ -107,7 +108,7 @@
             [id]="gender.id"
             [value]="gender.value"
             name="gender"
-            ngModel
+            [ngModel]="defaultGender"
           />
           <label [for]="gender.id">{{ gender.display }}</label>
         </div>
@@ -135,7 +136,7 @@
       />
       <div class="column">
         <div class="select-box">
-          <select name="country" ngModel required>
+          <select name="country" [ngModel]="defaultCountry" required>
             <option hidden>Country</option>
             <option>America</option>
             <option>Japan</option>
@@ -162,15 +163,23 @@
       >
     </div>
 
-    <input
-      type="submit"
-      value="Submit"
-      class="submit-btn"
-      [disabled]="!registrationForm.valid"
-      [ngClass]="{
-        'disabled-btn': registrationForm.invalid,
-        'enabled-btn': registrationForm.valid
-      }"
-    />
+    <div class="column">
+      <input
+        type="submit"
+        value="Submit"
+        class="submit-btn"
+        [disabled]="!registrationForm.valid"
+        [ngClass]="{
+          'disabled-btn': registrationForm.invalid,
+          'enabled-btn': registrationForm.valid
+        }"
+      />
+      <input
+        type="button"
+        value="Reset"
+        class="submit-btn"
+        (click)="resetForm()"
+      />
+    </div>
   </form>
 </section>

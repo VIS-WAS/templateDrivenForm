@@ -12,7 +12,10 @@ export class AppComponent {
   firstName: string = 'Vishwas';
   lastname: string = 'MS';
   mail: string = '';
-  dob: string = '';
+  dob: string = '10/04/2024';
+
+  defaultGender: string = 'male';
+  defaultCountry: string = 'India';
 
   @ViewChild('registrationForm') form: NgForm;
   genders = [
@@ -42,6 +45,17 @@ export class AppComponent {
     // console.log(this.form.value.gender);
     // console.log(this.form.value.address.country);
     // console.log(this.dob);
+
+    this.resetForm();
+  }
+  resetForm() {
+    this.form.reset();
+    this.form.form.patchValue({
+      gender: 'male',
+      address: {
+        country: 'India',
+      },
+    });
   }
 
   generateUserName() {
@@ -83,9 +97,6 @@ export class AppComponent {
 
     this.form.form.patchValue({
       username: username,
-      address: {
-        country: 'Japan',
-      },
     });
   }
 }
