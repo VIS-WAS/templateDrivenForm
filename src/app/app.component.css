@@ -121,7 +121,7 @@ input.ng-invalid.ng-touched {
   border: none;
   color: white;
 }
-/* 
+
 .user-detail-container {
   position: relative;
   max-width: 700px;
@@ -143,6 +143,7 @@ input.ng-invalid.ng-touched {
   font-weight: bold;
   padding: 40px 40px;
   color: white;
+  text-align: center;
 }
 
 .user-details {
@@ -158,8 +159,7 @@ input.ng-invalid.ng-touched {
 span {
   padding: 5px 5px;
   font-weight: bold;
-} */
-
+}
 .disabled-btn {
   cursor: not-allowed;
 }
