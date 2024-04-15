@@ -112,7 +112,7 @@ input.ng-invalid.ng-touched {
   border: red 2px solid;
 }
 
-/* .btn-gen-username {
+.btn-gen-username {
   margin: 10px 0px;
   padding: 10px 30px;
   border-radius: 5px;
@@ -120,7 +120,7 @@ input.ng-invalid.ng-touched {
   border: none;
   color: white;
 }
-
+/* 
 .user-detail-container {
   position: relative;
   max-width: 700px;

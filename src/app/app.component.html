@@ -64,14 +64,39 @@
         <input type="number" placeholder="Phone Number" name="phone" ngModel />
       </div>
       <div class="input-box">
-        <input type="date" placeholder="Date of Birth" name="dob" ngModel />
+        <input
+          type="date"
+          placeholder="Date of Birth"
+          name="dob"
+          [(ngModel)]="dob"
+          required
+          #dobTRV="ngModel"
+        />
       </div>
     </div>
 
-    <!-- <div class="input-box">
-      <input type="text" placeholder="username" />
-      <button class="btn-gen-username">Create a Username</button>
-    </div> -->
+    <div class="input-box">
+      <input
+        type="text"
+        placeholder="Username"
+        name="username"
+        ngModel
+        required
+        #uname="ngModel"
+      />
+      <button
+        class="btn-gen-username"
+        [disabled]="fname.invalid || lname.invalid || dobTRV.invalid"
+        (click)="generateUserName()"
+      >
+        Create a Username
+      </button>
+      <div>
+        <small *ngIf="uname.touched && uname.invalid"
+          >*Username is required</small
+        >
+      </div>
+    </div>
 
     <div class="gender-box">
       <h3>Gender</h3>
